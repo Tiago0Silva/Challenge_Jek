@@ -12,10 +12,17 @@ function App()  {
   const [Publish_date, setPublishDate] = useState("2000-01-01");
   const [Number_pages, setNumberPages] = useState(0);
   const [Book_cover, setBookCover] = useState("");
-  const [isShown, setIsShown] = useState(false);
+  const [isShowBooks, setIsShowBooks] = useState(false);
+  const [isAddBooks, setIsAddBooks] = useState(false);
 
-  const HandleClick = () => { 
-    setIsShown(!isShown);
+  const HandleClick_ShowBooks = () => { 
+    setIsShowBooks(!isShowBooks);
+    setIsAddBooks(false);
+  };
+
+  const HandleClick_AddBooks = () => {
+    setIsAddBooks(!isAddBooks);
+    setIsShowBooks(false);
   };
 
   useEffect(() => {
@@ -103,19 +110,17 @@ function App()  {
   }
   };
 
-  {/*const HandleClick = (info) => {
-    console.log(info);
-  }
-  */}
+ 
   return (
     <>
       <h1>Library</h1>
 
         <div className='Buttons'>
-        <button onClick={() => HandleClick()}>Show Books</button>
+        <button onClick={() => HandleClick_AddBooks()}>Add Books</button>
+        <button onClick={() => HandleClick_ShowBooks()}>Show Books</button>
         </div>
 
-        {isShown && (
+        {isAddBooks && (
           <BookForm
             setTitle={setTitle}
             setGenre={setGenre}
@@ -126,19 +131,15 @@ function App()  {
             addBook={addBook}
           />
         )}
-
-        <div className='Add_Button'>
-        <button onClick={() => HandleClick()}>Add Books</button>
-        </div>
         
-        {isShown && books.map((book) => (
+        {isShowBooks && (books.map((book) => (
           <BookComponent
             key={book.id}
             book={book}
             UpdateTitle={UpdateTitle}
             deleteBook={deleteBook}
           />
-        ))}
+        )))}
     </>
   );  
 };
