@@ -7,7 +7,7 @@ const BookComponent = ({ book, UpdateTitle, deleteBook }) => {
     <div key={book.id} className="book">
       <div className="bookinfo">
         <img src={book.Book_cover} alt="Book cover" />
-        <div>
+        <div className= "WrittenInfo">
           <p>Title: {book.Title}</p>
           <p>Genre: {book.Genre}</p>
           <p>Author: {book.Author}</p>

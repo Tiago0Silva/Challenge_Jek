@@ -43,22 +43,30 @@
 
 .bookinfo {
 display: flex;
+align-items: flex-start;
 flex-direction: row;
-text-justify: auto;
+text-justify: initial;
+margin: 0;
 }
 
-.Edit_Name {
-  justify-content: left;
+.WrittenInfo{
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+padding-left: 30px;
+padding-top: 30px;
 }
 
-.book {
-align-items: center;
-justify-content: left;
-max-width: 90rem;
-}
 
 .book img{
+padding-top: 30px;
+padding-bottom: 10px;
 width: 200px;
 max-height: auto;
 }
 
+.Buttons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
