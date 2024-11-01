@@ -1,4 +1,4 @@
-Inicialmente abro o VS Code e insiro  "npm run dev", abro e "python manage.py runserver" (quando localizado na pasta do ficheiro App).
-Posteriormente tenho o botão "Add Book" e "Show Books".  
-Carregando em "Add Book" basta preencher os dados do livro e acrregar no botão "Add Book".
-Carregando em "Show Books" são mostrados todos o livros da biblioteca. Para além disso é possível eliminar qualquer livro no botão "delete" ao lado de cada livro e é possível alterar o título de cada livro, escrevendo título novo e carregando no botão "Chande Title". 
+Initially I open VS Code and enter "npm run dev", open and "python manage.py runserver" (when located in the App file folder).
+Later I have the "Add Book" and "Show Books" button.  
+By clicking on "Add Book" just fill in the book details and press the "Add Book" button.
+Clicking on "Show Books" shows all the books in the library. In addition, it is possible to delete any book by clicking the "delete" button next to each book and it is possible to change the title of each book by typing a new title and pressing the "Chande Title" button. 
